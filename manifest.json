@@ -1,38 +1,19 @@
 {
   "manifest_version": 3,
-  "name": "〆をまでだよ🐼に変換する拡張機能",
-  "version": "1.0",
-  "description": "ページ内の「〆」を「までだよ🐼」に置き換えます",
-  "permissions": [
-    "scripting",
-    "activeTab",
-    "storage"
-  ],
-  "host_permissions": [
-    "<all_urls>"
-  ],
-  "content_scripts": [
-    {
-      "matches": [
-        "<all_urls>"
-      ],
-      "js": [
-        "content.js"
-      ],
-      "run_at": "document_end"
-    }
-  ],
-  "icons": {
-    "16": "icon16.png",
-    "48": "icon48.png",
-    "128": "icon128.png"
-  },
+  "name": "LetterChanger AI",
+  "version": "1.2",
+  "description": "AIを使ってメール本文を要約します。",
+  "permissions": ["scripting", "activeTab", "storage"],
+  "host_permissions": ["https://api.openai.com/*"],
   "action": {
-    "default_popup": "popup.html",
-    "default_icon": {
-      "16": "icon16.png",
-      "48": "icon48.png",
-      "128": "icon128.png"
-    }
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "icons": {
+    "16": "icon_16x16_blue.png",
+    "48": "icon_48x48_blue.png",
+    "128": "icon_128x128_blue.png"
   }
 }

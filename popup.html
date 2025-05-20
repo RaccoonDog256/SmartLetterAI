@@ -2,14 +2,16 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>LetterChanger</title>
+  <title>LetterChanger AI</title>
   <style>
     body {
       font-family: Arial, sans-serif;
       padding: 16px;
       background: #1e1e2d;
       color: #ffffff;
-      width: 200px;
+      width: 300px; /* 横幅を300pxに拡大 */
+      height: 400px; /* 縦幅も400pxに拡大 */
+      overflow-y: auto; /* 縦方向にスクロール可能 */
       text-align: center;
     }
     button {
@@ -22,15 +24,23 @@
       border-radius: 8px;
       margin-top: 10px;
     }
-    button.off {
-      background-color: #f44336;
+    #summary {
+      margin-top: 10px;
+      font-size: 14px;
+      text-align: left;
+      max-height: 250px; /* 要約エリアも広げる */
+      overflow-y: auto; /* スクロール可能 */
+      white-space: pre-wrap; /* 改行を保持 */
+      background-color: #2e2e3d;
+      padding: 10px;
+      border-radius: 8px;
     }
   </style>
 </head>
 <body>
-  <h2>置換を切り替える🐼</h2>
-  <!-- <p>置換を有効化/無効化</p> -->
-  <button id="toggleButton">Loading...</button>
+  <h2>LetterChanger AI</h2>
+  <button id="aiSummarizeButton">AIで要約</button>
+  <div id="summary"></div>
   <script src="popup.js"></script>
 </body>
 </html>
